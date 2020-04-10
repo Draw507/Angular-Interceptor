@@ -8,10 +8,10 @@ import { UsuariosService } from './services/usuarios.service';
 })
 export class AppComponent {
   constructor(private usuarioService: UsuariosService) {
-    usuarioService.obtenerUsuarios().subscribe(resp => {
+    usuarioService.obtenerUsuariosInterceptor().subscribe(resp => {
       console.log(resp);
     }, (err) => {
-      console.log('Error AppComponent');
+      console.log(err);
     });
   }
 }

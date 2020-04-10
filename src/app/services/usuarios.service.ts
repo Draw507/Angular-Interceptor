@@ -15,12 +15,11 @@ export class UsuariosService {
     let params = new HttpParams().append('page', '1');
     params = params.append('nombre', 'David Robinson');
 
-    return this.http.get(`https://reqres.in/api/user`, {
+    return this.http.get(`https://reqres12121.in/api/user`, {
       params
     })
     .pipe(
-      map((resp: any) => resp['data']),
-      catchError(this.manejarError)
+      map((resp: any) => resp['data'])
     );
   }
 
